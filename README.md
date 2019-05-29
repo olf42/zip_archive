@@ -1,5 +1,7 @@
 # ZipArchive
 
+![CircleCI](https://img.shields.io/circleci/build/github/olf42/zip_archive.svg)
+
 ZipArchive class for easy/quick data storage (text and json files).
 
 ## Installation
