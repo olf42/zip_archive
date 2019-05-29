@@ -5,6 +5,10 @@ jobs:
       - image: circleci/python:3.7.3-stretch
     steps:
       - checkout
-      - run: pip install -r requirements.txt
-      - run: pip install pytest
+      - run:
+          name: Install Python dependencies in a venv
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
       - run: pytest zip_archive
