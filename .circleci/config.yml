@@ -11,4 +11,8 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-      - run: pytest zip_archive
+      - run: 
+          name: Run tests
+          command: |
+            . venv/bin/activate
+            pytest zip_archive
