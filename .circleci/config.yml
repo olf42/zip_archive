@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7.3-stretch
+    steps:
+      - checkout
+      - run: pip install -r requirements/dev.txt
+      - run: pip install pytest
+      - run: pytest zip_archive
